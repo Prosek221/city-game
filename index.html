@@ -32,12 +32,7 @@
             <h2>Radar</h2>
             <button id="scan">Skanuj</button>
           </div>
-          <div class="radar-visual">
-            <div class="radar-circle">
-              <span class="radar-sweep"></span>
-            </div>
-            <p class="hint">F-35 i drony stealth mogą być niewykrywalne.</p>
-          </div>
+          <p class="hint">F-35 i drony stealth mogą być niewykrywalne.</p>
           <ul id="radar-list" class="radar-list"></ul>
         </section>
       </aside>
@@ -59,16 +54,8 @@
                 <strong id="defense">0</strong>
               </div>
               <div>
-                <span class="label">Integralność</span>
-                <strong id="integrity">0</strong>
-              </div>
-              <div>
                 <span class="label">Zagrożenie</span>
                 <strong id="threat">Niski</strong>
-              </div>
-              <div>
-                <span class="label">Status</span>
-                <strong id="status">Aktywne</strong>
               </div>
             </div>
           </div>
@@ -86,14 +73,6 @@
           <div class="shop-grid" id="shop-grid"></div>
         </section>
 
-        <section class="minimap">
-          <div class="section-title">
-            <h2>Mini mapa</h2>
-            <p class="muted">Podgląd terenów i kierunków ataku.</p>
-          </div>
-          <div id="minimap-grid" class="minimap-grid" aria-label="Mini mapa terenu"></div>
-        </section>
-
         <section class="city-assets">
           <div class="section-title">
             <h2>Aktywa miasta</h2>
@@ -102,17 +81,6 @@
           <div class="assets-grid" id="assets-grid"></div>
         </section>
       </main>
-    </div>
-
-    <div id="loss-overlay" class="loss-overlay" role="alertdialog" aria-live="assertive">
-      <div class="loss-card">
-        <h2>Miasto upadło</h2>
-        <p class="muted">
-          Boty przejęły kontrolę. Odbuduj się w innym mieście lub rozpocznij nową
-          kampanię.
-        </p>
-        <button id="restart-campaign">Nowa kampania</button>
-      </div>
     </div>
 
     <script src="app.js"></script>
