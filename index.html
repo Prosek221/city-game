@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City-Game: Nowoczesne Państwo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header>
+          <h1>Twoje Państwo</h1>
+          <p class="subtitle">Single player • Boty atakują</p>
+        </header>
+        <section class="profile">
+          <div>
+            <span class="label">Konto</span>
+            <strong id="account-name">Gracz</strong>
+          </div>
+          <button id="reset-save" class="ghost">Reset zapisu</button>
+        </section>
+        <section class="cities">
+          <div class="section-title">
+            <h2>Miasta</h2>
+            <button id="add-city">+ Dodaj</button>
+          </div>
+          <ul id="city-list"></ul>
+        </section>
+        <section class="radar">
+          <div class="section-title">
+            <h2>Radar</h2>
+            <button id="scan">Skanuj</button>
+          </div>
+          <div class="radar-visual">
+            <div class="radar-circle">
+              <span class="radar-sweep"></span>
+            </div>
+            <p class="hint">F-35 i drony stealth mogą być niewykrywalne.</p>
+          </div>
+          <ul id="radar-list" class="radar-list"></ul>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="overview">
+          <div class="overview-card">
+            <h2 id="city-name">Miasto Alfa</h2>
+            <p id="city-desc" class="muted">
+              Rozbuduj miasto, wzmacniaj armię i przygotuj się na ataki botów.
+            </p>
+            <div class="stats">
+              <div>
+                <span class="label">Budżet</span>
+                <strong id="budget">0</strong>
+              </div>
+              <div>
+                <span class="label">Poziom obrony</span>
+                <strong id="defense">0</strong>
+              </div>
+              <div>
+                <span class="label">Integralność</span>
+                <strong id="integrity">0</strong>
+              </div>
+              <div>
+                <span class="label">Zagrożenie</span>
+                <strong id="threat">Niski</strong>
+              </div>
+              <div>
+                <span class="label">Status</span>
+                <strong id="status">Aktywne</strong>
+              </div>
+            </div>
+          </div>
+          <div class="overview-card">
+            <h3>Alerty</h3>
+            <ul id="alerts" class="alerts"></ul>
+          </div>
+        </section>
+
+        <section class="shop">
+          <div class="section-title">
+            <h2>Zakupy wojskowe</h2>
+            <p class="muted">Każdy zakup pojawia się w aktywnym mieście.</p>
+          </div>
+          <div class="shop-grid" id="shop-grid"></div>
+        </section>
+
+        <section class="minimap">
+          <div class="section-title">
+            <h2>Mini mapa</h2>
+            <p class="muted">Podgląd terenów i kierunków ataku.</p>
+          </div>
+          <div id="minimap-grid" class="minimap-grid" aria-label="Mini mapa terenu"></div>
+        </section>
+
+        <section class="city-assets">
+          <div class="section-title">
+            <h2>Aktywa miasta</h2>
+            <p class="muted">Lotniska, jednostki i systemy obrony.</p>
+          </div>
+          <div class="assets-grid" id="assets-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="loss-overlay" class="loss-overlay" role="alertdialog" aria-live="assertive">
+      <div class="loss-card">
+        <h2>Miasto upadło</h2>
+        <p class="muted">
+          Boty przejęły kontrolę. Odbuduj się w innym mieście lub rozpocznij nową
+          kampanię.
+        </p>
+        <button id="restart-campaign">Nowa kampania</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
